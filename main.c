@@ -59,14 +59,34 @@ int main()
 
     // close unless you type 'q'
     fclose(file);
-    printf("Press 'q' to exit...\n");
-    char ch = getch();
-    while (ch != 'q')
-    {
-        ch = getch();
+    printf("Press 'asd' to exit...\n");
+    char ch1 = getch();
+    char ch2 = 0;
+    char ch3 = 0;
+    if (ch1 == 'a' || ch1 == 's' || ch1 == 'd') {
+        ch2 = getch();
+        if (ch2 == 's' || ch2 == 'd' || ch2 == 'a') {
+            ch3 = getch();
+            if (ch3 == 's' || ch3 == 'd' || ch3 == 'a') {
+                return 0;
+            }
+        }
     }
-    return 0;
-
+    while (1) {
+        printf("Wrong key sequence. Try again...\n");
+        ch1 = getch();
+        ch2 = 0;
+        ch3 = 0;
+        if (ch1 == 'a' || ch1 == 's' || ch1 == 'd') {
+            ch2 = getch();
+            if (ch2 == 's' || ch2 == 'd' || ch2 == 'a') {
+                ch3 = getch();
+                if (ch3 == 's' || ch3 == 'd' || ch3 == 'a') {
+                    return 0;
+                }
+            }
+        }
+    }
     // // close the file if any key presssed
     // fclose(file);
     // // keep running until user press a key
