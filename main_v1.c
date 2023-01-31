@@ -45,26 +45,27 @@ int main()
         }
         printf("\n");
     }
-    fclose(file);
-    char close_input[MAX_LENGTH];
-    printf("Type 'close' to exit: ");
-    scanf("%s", close_input);
-    while (strcmp(close_input, "close") != 0)
-    {
-        printf("Type 'close' to exit: ");
-        scanf("%s", close_input);
-    }
-    return 0;
-
-    // // close unless you type 'q'
+    // // Type 'close' to exit
     // fclose(file);
-    // printf("Press 'q' to exit...\n");
-    // char ch = getch();
-    // while (ch != 'q')
+    // char close_input[MAX_LENGTH];
+    // printf("Type 'close' to exit: ");
+    // scanf("%s", close_input);
+    // while (strcmp(close_input, "close") != 0)
     // {
-    //     ch = getch();
+    //     printf("Type 'close' to exit: ");
+    //     scanf("%s", close_input);
     // }
     // return 0;
+
+    // close unless you type 'q'
+    fclose(file);
+    printf("Press 'q' to exit...\n");
+    char ch = getch();
+    while (ch != 'q')
+    {
+        ch = getch();
+    }
+    return 0;
 
     // // close the file if any key presssed
     // fclose(file);
